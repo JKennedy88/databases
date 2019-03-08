@@ -17,3 +17,4 @@ C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\pr
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\Database1.dll
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\Database1.pdb
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Debug\deploy.ps1
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\Database1.sqlprojAssemblyReference.cache
