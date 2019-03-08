@@ -7,3 +7,7 @@ C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Release\
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Database1.sqlproj.CopyComplete
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Database1.dll
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Database1.pdb
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Model.xml
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\refactor.xml
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\postdeploy.sql
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\predeploy.sql

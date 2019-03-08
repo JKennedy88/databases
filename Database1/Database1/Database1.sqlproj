@@ -149,6 +149,7 @@
     <Build Include="dbo\User Defined Types\tSessionItemLong.sql" />
     <Build Include="dbo\User Defined Types\tSessionItemShort.sql" />
     <Build Include="dbo\User Defined Types\tTextPtr.sql" />
+    <Build Include="COAL_ChangeScript_#1_to_#2.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="local.publish.xml" />
