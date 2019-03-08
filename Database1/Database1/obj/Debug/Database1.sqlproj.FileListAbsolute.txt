@@ -16,3 +16,4 @@ C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\po
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\predeploy.sql
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\Database1.dll
 C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\Database1.pdb
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Debug\Database1.sqlprojAssemblyReference.cache
