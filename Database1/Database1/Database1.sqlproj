@@ -157,6 +157,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OctoPack.Tasks">
+      <HintPath>..\..\..\Database1\packages\OctoPack.3.6.4\build\OctoPack.Tasks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="..\packages\OctoPack.3.6.4\build\OctoPack.targets" />
-	
 </Project>
