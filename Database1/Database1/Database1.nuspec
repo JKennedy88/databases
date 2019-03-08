@@ -7,7 +7,7 @@
 		<description>Package for Database1</description>
 	</metadata>
 	<files>
-		<file src="..\Database1\bin\Release\Database1.dacpac" target="Content" />
-		<file src="..\Database1\bin\Release\Deploy.ps1" />
+		<file src="..\Database1\*.sql" target="Content" />
+
 	</files>
 </package>
