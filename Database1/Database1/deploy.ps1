@@ -1,5 +1,5 @@
 ﻿# Set params
-$databaseName = "SimonOctopusPlay"
+$databaseName = "Database1"
 
 # Add the DLL
 # For 32-bit machines
