@@ -1,33 +1,27 @@
-﻿SET NUMERIC_ROUNDABORT OFF
+﻿
+SET NUMERIC_ROUNDABORT OFF
 GO
+
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
+
 USE [Utility]
 GO
+
 SET XACT_ABORT ON
 GO
+
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 GO
+
 BEGIN TRANSACTION
 GO
 
--- Stored Procedure
+IF @@ERROR <> 0 SET NOEXEC ON
+GO
 
-create procedure [dbo].[spGetLedgerAccountTransactionDateOptions]
-
-as
-
-
-
-select
-	'Entry Date' vchType,
-	'dteLedgerAccountTransactionEntryDate' vchDateType
-
-union
-
-select
-	'Value Date' vchType,
-	'dteLedgerAccountTransactionValueDate' vchDateType
+IF @@ERROR <> 0 SET NOEXEC ON
+GO
 
 -- This statement writes to the SQL Server Log so SQL Monitor can show this deployment.
 IF HAS_PERMS_BY_NAME(N'sys.xp_logevent', N'OBJECT', N'EXECUTE') = 1
@@ -38,6 +32,7 @@ BEGIN
     EXECUTE sys.xp_logevent 55000, @eventMessage
 END
 GO
+
 DECLARE @Success AS BIT
 SET @Success = 1
 SET NOEXEC OFF
@@ -46,4 +41,6 @@ ELSE BEGIN
 	IF @@TRANCOUNT > 0 ROLLBACK TRANSACTION
 	PRINT 'The database update failed'
 END
+
+
 GO

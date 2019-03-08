@@ -1,0 +1,4256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Database1.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\JEFFREY.KENNEDY\SOURCE\REPOS\DATABASES\DATABASE1\DATABASE1\OBJ\RELEASE\DATABASE1.DLL" />
+			<Metadata Name="AssemblyName" Value="Database1" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Database1.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[db_gbobespokeapp]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[db_gbobespokeappelevated]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[ASPStateTempApplications]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempApplications].[AppId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempApplications].[AppName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="280" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[ASPStateTempApplications].[Index_AppName]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[ASPStateTempApplications].[AppName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempApplications]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[ASPStateTempSessions]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[SessionId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="88" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[Created]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[Expires]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[LockDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[LockDateLocal]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[LockCookie]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[Timeout]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[Locked]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[SessionItemShort]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="7000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varbinary]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[SessionItemLong]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[image]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ASPStateTempSessions].[Flags]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlIndex" Name="[dbo].[ASPStateTempSessions].[Index_Expires]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[ASPStateTempSessions].[Expires]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CreateTempTables]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            CREATE TABLE [ASPState].dbo.ASPStateTempSessions (
+                SessionId           nvarchar(88)    NOT NULL PRIMARY KEY,
+                Created             datetime        NOT NULL DEFAULT GETUTCDATE(),
+                Expires             datetime        NOT NULL,
+                LockDate            datetime        NOT NULL,
+                LockDateLocal       datetime        NOT NULL,
+                LockCookie          int             NOT NULL,
+                Timeout             int             NOT NULL,
+                Locked              bit             NOT NULL,
+                SessionItemShort    VARBINARY(7000) NULL,
+                SessionItemLong     image           NULL,
+                Flags               int             NOT NULL DEFAULT 0,
+            ) 
+
+            CREATE NONCLUSTERED INDEX Index_Expires ON [ASPState].dbo.ASPStateTempSessions(Expires)
+
+            CREATE TABLE [ASPState].dbo.ASPStateTempApplications (
+                AppId               int             NOT NULL PRIMARY KEY,
+                AppName             char(280)       NOT NULL,
+            ) 
+
+            CREATE NONCLUSTERED INDEX Index_AppName ON [ASPState].dbo.ASPStateTempApplications(AppName)
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[SessionId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[Created]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[Expires]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[LockDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[LockDateLocal]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[LockCookie]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[Timeout]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[Locked]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[SessionItemShort]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varbinary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[SessionItemLong]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[image]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[Flags]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[ASPStateTempApplications].[AppId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ASPStateTempApplications].[AppName]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1329" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[CreateTempTables]&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[DeleteExpiredSessions]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            SET NOCOUNT ON
+            SET DEADLOCK_PRIORITY LOW 
+
+            DECLARE @now datetime
+            SET @now = GETUTCDATE() 
+
+            CREATE TABLE #tblExpiredSessions 
+            ( 
+                SessionId nvarchar(88) NOT NULL PRIMARY KEY
+            )
+
+            INSERT #tblExpiredSessions (SessionId)
+                SELECT SessionId
+                FROM [ASPState].dbo.ASPStateTempSessions WITH (READUNCOMMITTED)
+                WHERE Expires < @now
+
+            IF @@ROWCOUNT <> 0 
+            BEGIN 
+                DECLARE ExpiredSessionCursor CURSOR LOCAL FORWARD_ONLY READ_ONLY
+                FOR SELECT SessionId FROM #tblExpiredSessions 
+
+                DECLARE @SessionId nvarchar(88)
+
+                OPEN ExpiredSessionCursor
+
+                FETCH NEXT FROM ExpiredSessionCursor INTO @SessionId
+
+                WHILE @@FETCH_STATUS = 0 
+                    BEGIN
+                        DELETE FROM [ASPState].dbo.ASPStateTempSessions WHERE SessionId = @SessionId AND Expires < @now
+                        FETCH NEXT FROM ExpiredSessionCursor INTO @SessionId
+                    END
+
+                CLOSE ExpiredSessionCursor
+
+                DEALLOCATE ExpiredSessionCursor
+
+            END 
+
+            DROP TABLE #tblExpiredSessions
+
+        RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteExpiredSessions].[#tblExpiredSessions]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DeleteExpiredSessions].[#tblExpiredSessions].[SessionId]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[DeleteExpiredSessions].[#tblExpiredSessions]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[DeleteExpiredSessions].[#tblExpiredSessions].[SessionId]">
+									<Property Name="IsNullable" Value="False" />
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Property Name="Length" Value="88" />
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1407" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[DeleteExpiredSessions]&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF__ASPStateT__Creat__5EBF139D]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(getutcdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[Created]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="5" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF__ASPStateT__Flags__5FB337D6]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions].[Flags]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="6" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetHashCode]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+    /* 
+       This sproc is based on this C# hash function:
+
+        int GetHashCode(string s)
+        {
+            int     hash = 5381;
+            int     len = s.Length;
+
+            for (int i = 0; i < len; i++) {
+                int     c = Convert.ToInt32(s[i]);
+                hash = ((hash << 5) + hash) ^ c;
+            }
+
+            return hash;
+        }
+
+        However, SQL 7 doesn't provide a 32-bit integer
+        type that allows rollover of bits, we have to
+        divide our 32bit integer into the upper and lower
+        16 bits to do our calculation.
+    */
+       
+    DECLARE @hi_16bit   int
+    DECLARE @lo_16bit   int
+    DECLARE @hi_t       int
+    DECLARE @lo_t       int
+    DECLARE @len        int
+    DECLARE @i          int
+    DECLARE @c          int
+    DECLARE @carry      int
+
+    SET @hi_16bit = 0
+    SET @lo_16bit = 5381
+    
+    SET @len = DATALENGTH(@input)
+    SET @i = 1
+    
+    WHILE (@i <= @len)
+    BEGIN
+        SET @c = ASCII(SUBSTRING(@input, @i, 1))
+
+        /* Formula:                        
+           hash = ((hash << 5) + hash) ^ c */
+
+        /* hash << 5 */
+        SET @hi_t = @hi_16bit * 32 /* high 16bits << 5 */
+        SET @hi_t = @hi_t & 0xFFFF /* zero out overflow */
+        
+        SET @lo_t = @lo_16bit * 32 /* low 16bits << 5 */
+        
+        SET @carry = @lo_16bit & 0x1F0000 /* move low 16bits carryover to hi 16bits */
+        SET @carry = @carry / 0x10000 /* >> 16 */
+        SET @hi_t = @hi_t + @carry
+        SET @hi_t = @hi_t & 0xFFFF /* zero out overflow */
+
+        /* + hash */
+        SET @lo_16bit = @lo_16bit + @lo_t
+        SET @hi_16bit = @hi_16bit + @hi_t + (@lo_16bit / 0x10000)
+        /* delay clearing the overflow */
+
+        /* ^c */
+        SET @lo_16bit = @lo_16bit ^ @c
+
+        /* Now clear the overflow bits */	
+        SET @hi_16bit = @hi_16bit & 0xFFFF
+        SET @lo_16bit = @lo_16bit & 0xFFFF
+
+        SET @i = @i + 1
+    END
+
+    /* Do a sign extension of the hi-16bit if needed */
+    IF (@hi_16bit & 0x8000 <> 0)
+        SET @hi_16bit = 0xFFFF0000 | @hi_16bit
+
+    /* Merge hi and lo 16bit back together */
+    SET @hi_16bit = @hi_16bit * 0x10000 /* << 16 */
+    SET @hash = @hi_16bit | @lo_16bit
+
+    RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetHashCode].[@input]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetHashCode].[@hash]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetHashCode].[@input]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tAppName]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetHashCode].[@hash]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="85" />
+				<Property Name="Length" Value="2473" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;/*****************************************************************************/&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[GetHashCode]&#xD;&#xA;    @input tAppName,&#xD;&#xA;    @hash int OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetMajorVersion]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+BEGIN
+	DECLARE @version        nchar(100)
+	DECLARE @dot            int
+	DECLARE @hyphen         int
+	DECLARE @SqlToExec      nchar(4000)
+
+	SELECT @@ver = 7
+	SELECT @version = @@Version
+	SELECT @hyphen  = CHARINDEX(N' - ', @version)
+	IF (NOT(@hyphen IS NULL) AND @hyphen > 0)
+	BEGIN
+		SELECT @hyphen = @hyphen + 3
+		SELECT @dot    = CHARINDEX(N'.', @version, @hyphen)
+		IF (NOT(@dot IS NULL) AND @dot > @hyphen)
+		BEGIN
+			SELECT @version = SUBSTRING(@version, @hyphen, @dot - @hyphen)
+			SELECT @@ver     = CONVERT(int, @version)
+		END
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetMajorVersion].[@@ver]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetMajorVersion].[@@ver]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="85" />
+				<Property Name="Length" Value="716" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;/*****************************************************************************/&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[GetMajorVersion]&#xD;&#xA;    @@ver int OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK__ASPState__8E2CF7F93A08B06E]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[ASPStateTempApplications].[AppId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempApplications]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK__ASPState__C9F4929097DC1B79]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[ASPStateTempSessions].[SessionId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[ASPStateTempSessions]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_SchemaChangeLog]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[SchemaChangeLog].[SchemaChangeLogID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[SchemaChangeLog]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[SchemaChangeLogID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[CreateDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[LoginName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[ComputerName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[DBName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[SQLEvent]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[Schema]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[ObjectName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[SQLCmd]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[XmlEvent]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlXmlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[xml]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SchemaChangeLog].[AppName]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetLedgerAccountTransactionDateOptions]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+
+
+select
+	'Entry Date' vchType,
+	'dteLedgerAccountTransactionEntryDate' vchDateType
+
+union
+
+select
+	'Value Date' vchType,
+	'dteLedgerAccountTransactionValueDate' vchDateType]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="23" />
+				<Property Name="Length" Value="281" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- Stored Procedure&#xD;&#xA;&#xD;&#xA;CREATE procedure [dbo].[spGetLedgerAccountTransactionDateOptions]&#xD;&#xA;&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlUserDefinedDataType" Name="[dbo].[tAppName]">
+			<Property Name="IsNullable" Value="False" />
+			<Property Name="Length" Value="280" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetAppID]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+    SET @appName = 'sharedsky' -- LOWER(@appName)
+    SET @appId = NULL
+
+    SELECT @appId = AppId
+    FROM [ASPState].dbo.ASPStateTempApplications
+    WHERE AppName = @appName
+
+    IF @appId IS NULL BEGIN
+        BEGIN TRAN        
+
+        SELECT @appId = AppId
+        FROM [ASPState].dbo.ASPStateTempApplications WITH (TABLOCKX)
+        WHERE AppName = @appName
+        
+        IF @appId IS NULL
+        BEGIN
+            EXEC GetHashCode @appName, @appId OUTPUT
+            
+            INSERT [ASPState].dbo.ASPStateTempApplications
+            VALUES
+            (@appId, @appName)
+            
+            IF @@ERROR = 2627 
+            BEGIN
+                DECLARE @dupApp tAppName
+            
+                SELECT @dupApp = RTRIM(AppName)
+                FROM [ASPState].dbo.ASPStateTempApplications 
+                WHERE AppId = @appId
+                
+                RAISERROR('SQL session state fatal error: hash-code collision between applications ''%s'' and ''%s''. Please rename the 1st application to resolve the problem.', 
+                            18, 1, @appName, @dupApp)
+            END
+        END
+
+        COMMIT
+    END
+
+    RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tAppName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempGetAppID].[@appName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempGetAppID].[@appId]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[GetHashCode]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetAppID].[@appName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tAppName]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetAppID].[@appId]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1318" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;    CREATE PROCEDURE [dbo].[TempGetAppID]&#xD;&#xA;    @appName    tAppName,&#xD;&#xA;    @appId      int OUTPUT&#xD;&#xA;    AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetStateItem]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            DECLARE @textptr AS tTextPtr
+            DECLARE @length AS int
+            DECLARE @now AS datetime
+            SET @now = GETUTCDATE()
+
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, @now), 
+                @locked = Locked,
+                @lockDate = LockDateLocal,
+                @lockCookie = LockCookie,
+                @itemShort = CASE @locked
+                    WHEN 0 THEN SessionItemShort
+                    ELSE NULL
+                    END,
+                @textptr = CASE @locked
+                    WHEN 0 THEN TEXTPTR(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @length = CASE @locked
+                    WHEN 0 THEN DATALENGTH(SessionItemLong)
+                    ELSE NULL
+                    END
+            WHERE SessionId = @id
+            IF @length IS NOT NULL BEGIN
+                READTEXT [ASPState].dbo.ASPStateTempSessions.SessionItemLong @textptr 0 @length
+            END
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tTextPtr]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem].[@locked]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem].[@lockDate]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem].[@lockCookie]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem].[@itemShort]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem].[@locked]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem].[@lockDate]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem].[@lockCookie]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1332" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempGetStateItem]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort OUTPUT,&#xD;&#xA;            @locked     bit OUTPUT,&#xD;&#xA;            @lockDate   datetime OUTPUT,&#xD;&#xA;            @lockCookie int OUTPUT&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetStateItem2]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            DECLARE @textptr AS tTextPtr
+            DECLARE @length AS int
+            DECLARE @now AS datetime
+            SET @now = GETUTCDATE()
+
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, @now), 
+                @locked = Locked,
+                @lockAge = DATEDIFF(second, LockDate, @now),
+                @lockCookie = LockCookie,
+                @itemShort = CASE @locked
+                    WHEN 0 THEN SessionItemShort
+                    ELSE NULL
+                    END,
+                @textptr = CASE @locked
+                    WHEN 0 THEN TEXTPTR(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @length = CASE @locked
+                    WHEN 0 THEN DATALENGTH(SessionItemLong)
+                    ELSE NULL
+                    END
+            WHERE SessionId = @id
+            IF @length IS NOT NULL BEGIN
+                READTEXT [ASPState].dbo.ASPStateTempSessions.SessionItemLong @textptr 0 @length
+            END
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tTextPtr]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem2].[@locked]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem2].[@lockAge]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem2].[@lockCookie]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem2].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem2].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem2].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem2].[@itemShort]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem2].[@locked]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem2].[@lockAge]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem2].[@lockCookie]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1346" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempGetStateItem2]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort OUTPUT,&#xD;&#xA;            @locked     bit OUTPUT,&#xD;&#xA;            @lockAge    int OUTPUT,&#xD;&#xA;            @lockCookie int OUTPUT&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetStateItem3]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            DECLARE @textptr AS tTextPtr
+            DECLARE @length AS int
+            DECLARE @now AS datetime
+            SET @now = GETUTCDATE()
+
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, @now), 
+                @locked = Locked,
+                @lockAge = DATEDIFF(second, LockDate, @now),
+                @lockCookie = LockCookie,
+                @itemShort = CASE @locked
+                    WHEN 0 THEN SessionItemShort
+                    ELSE NULL
+                    END,
+                @textptr = CASE @locked
+                    WHEN 0 THEN TEXTPTR(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @length = CASE @locked
+                    WHEN 0 THEN DATALENGTH(SessionItemLong)
+                    ELSE NULL
+                    END,
+
+                /* If the Uninitialized flag (0x1) if it is set,
+                   remove it and return InitializeItem (0x1) in actionFlags */
+                Flags = CASE
+                    WHEN (Flags & 1) <> 0 THEN (Flags & ~1)
+                    ELSE Flags
+                    END,
+                @actionFlags = CASE
+                    WHEN (Flags & 1) <> 0 THEN 1
+                    ELSE 0
+                    END
+            WHERE SessionId = @id
+            IF @length IS NOT NULL BEGIN
+                READTEXT [ASPState].dbo.ASPStateTempSessions.SessionItemLong @textptr 0 @length
+            END
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tTextPtr]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem3].[@locked]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem3].[@lockAge]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem3].[@lockCookie]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem3].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem3].[@actionFlags]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItem3].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem3].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem3].[@itemShort]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem3].[@locked]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem3].[@lockAge]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem3].[@lockCookie]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItem3].[@actionFlags]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1822" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempGetStateItem3]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort OUTPUT,&#xD;&#xA;            @locked     bit OUTPUT,&#xD;&#xA;            @lockAge    int OUTPUT,&#xD;&#xA;            @lockCookie int OUTPUT,&#xD;&#xA;            @actionFlags int OUTPUT&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetStateItemExclusive]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            DECLARE @textptr AS tTextPtr
+            DECLARE @length AS int
+            DECLARE @now AS datetime
+            DECLARE @nowLocal AS datetime
+
+            SET @now = GETUTCDATE()
+            SET @nowLocal = GETDATE()
+            
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, @now), 
+                LockDate = CASE Locked
+                    WHEN 0 THEN @now
+                    ELSE LockDate
+                    END,
+                @lockDate = LockDateLocal = CASE Locked
+                    WHEN 0 THEN @nowLocal
+                    ELSE LockDateLocal
+                    END,
+                @lockCookie = LockCookie = CASE Locked
+                    WHEN 0 THEN LockCookie + 1
+                    ELSE LockCookie
+                    END,
+                @itemShort = CASE Locked
+                    WHEN 0 THEN SessionItemShort
+                    ELSE NULL
+                    END,
+                @textptr = CASE Locked
+                    WHEN 0 THEN TEXTPTR(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @length = CASE Locked
+                    WHEN 0 THEN DATALENGTH(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @locked = Locked,
+                Locked = 1
+            WHERE SessionId = @id
+            IF @length IS NOT NULL BEGIN
+                READTEXT [ASPState].dbo.ASPStateTempSessions.SessionItemLong @textptr 0 @length
+            END
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tTextPtr]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive].[@lockDate]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive].[@lockCookie]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive].[@locked]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive].[@itemShort]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive].[@locked]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive].[@lockDate]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive].[@lockCookie]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1848" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempGetStateItemExclusive]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort OUTPUT,&#xD;&#xA;            @locked     bit OUTPUT,&#xD;&#xA;            @lockDate   datetime OUTPUT,&#xD;&#xA;            @lockCookie int OUTPUT&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetStateItemExclusive2]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            DECLARE @textptr AS tTextPtr
+            DECLARE @length AS int
+            DECLARE @now AS datetime
+            DECLARE @nowLocal AS datetime
+
+            SET @now = GETUTCDATE()
+            SET @nowLocal = GETDATE()
+            
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, @now), 
+                LockDate = CASE Locked
+                    WHEN 0 THEN @now
+                    ELSE LockDate
+                    END,
+                LockDateLocal = CASE Locked
+                    WHEN 0 THEN @nowLocal
+                    ELSE LockDateLocal
+                    END,
+                @lockAge = CASE Locked
+                    WHEN 0 THEN 0
+                    ELSE DATEDIFF(second, LockDate, @now)
+                    END,
+                @lockCookie = LockCookie = CASE Locked
+                    WHEN 0 THEN LockCookie + 1
+                    ELSE LockCookie
+                    END,
+                @itemShort = CASE Locked
+                    WHEN 0 THEN SessionItemShort
+                    ELSE NULL
+                    END,
+                @textptr = CASE Locked
+                    WHEN 0 THEN TEXTPTR(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @length = CASE Locked
+                    WHEN 0 THEN DATALENGTH(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @locked = Locked,
+                Locked = 1
+            WHERE SessionId = @id
+            IF @length IS NOT NULL BEGIN
+                READTEXT [ASPState].dbo.ASPStateTempSessions.SessionItemLong @textptr 0 @length
+            END
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tTextPtr]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive2].[@lockAge]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive2].[@lockCookie]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive2].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive2].[@locked]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive2].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive2].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive2].[@itemShort]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive2].[@locked]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive2].[@lockAge]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive2].[@lockCookie]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="1992" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempGetStateItemExclusive2]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort OUTPUT,&#xD;&#xA;            @locked     bit OUTPUT,&#xD;&#xA;            @lockAge    int OUTPUT,&#xD;&#xA;            @lockCookie int OUTPUT&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetStateItemExclusive3]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            DECLARE @textptr AS tTextPtr
+            DECLARE @length AS int
+            DECLARE @now AS datetime
+            DECLARE @nowLocal AS datetime
+
+            SET @now = GETUTCDATE()
+            SET @nowLocal = GETDATE()
+            
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, @now), 
+                LockDate = CASE Locked
+                    WHEN 0 THEN @now
+                    ELSE LockDate
+                    END,
+                LockDateLocal = CASE Locked
+                    WHEN 0 THEN @nowLocal
+                    ELSE LockDateLocal
+                    END,
+                @lockAge = CASE Locked
+                    WHEN 0 THEN 0
+                    ELSE DATEDIFF(second, LockDate, @now)
+                    END,
+                @lockCookie = LockCookie = CASE Locked
+                    WHEN 0 THEN LockCookie + 1
+                    ELSE LockCookie
+                    END,
+                @itemShort = CASE Locked
+                    WHEN 0 THEN SessionItemShort
+                    ELSE NULL
+                    END,
+                @textptr = CASE Locked
+                    WHEN 0 THEN TEXTPTR(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @length = CASE Locked
+                    WHEN 0 THEN DATALENGTH(SessionItemLong)
+                    ELSE NULL
+                    END,
+                @locked = Locked,
+                Locked = 1,
+
+                /* If the Uninitialized flag (0x1) if it is set,
+                   remove it and return InitializeItem (0x1) in actionFlags */
+                Flags = CASE
+                    WHEN (Flags & 1) <> 0 THEN (Flags & ~1)
+                    ELSE Flags
+                    END,
+                @actionFlags = CASE
+                    WHEN (Flags & 1) <> 0 THEN 1
+                    ELSE 0
+                    END
+            WHERE SessionId = @id
+            IF @length IS NOT NULL BEGIN
+                READTEXT [ASPState].dbo.ASPStateTempSessions.SessionItemLong @textptr 0 @length
+            END
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tTextPtr]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive3].[@lockAge]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive3].[@lockCookie]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive3].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive3].[@locked]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive3].[@actionFlags]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempGetStateItemExclusive3].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive3].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive3].[@itemShort]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive3].[@locked]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive3].[@lockAge]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive3].[@lockCookie]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetStateItemExclusive3].[@actionFlags]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="2468" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempGetStateItemExclusive3]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort OUTPUT,&#xD;&#xA;            @locked     bit OUTPUT,&#xD;&#xA;            @lockAge    int OUTPUT,&#xD;&#xA;            @lockCookie int OUTPUT,&#xD;&#xA;            @actionFlags int OUTPUT&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempGetVersion]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+    SELECT @ver = "2"
+    RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[TempGetVersion].[@ver]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempGetVersion].[@ver]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="85" />
+				<Property Name="Length" Value="196" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;/*****************************************************************************/&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[TempGetVersion]&#xD;&#xA;    @ver      char(10) OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempInsertStateItemLong]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[    
+            DECLARE @now AS datetime
+            DECLARE @nowLocal AS datetime
+            
+            SET @now = GETUTCDATE()
+            SET @nowLocal = GETDATE()
+
+            INSERT [ASPState].dbo.ASPStateTempSessions 
+                (SessionId, 
+                 SessionItemLong, 
+                 Timeout, 
+                 Expires, 
+                 Locked, 
+                 LockDate,
+                 LockDateLocal,
+                 LockCookie) 
+            VALUES 
+                (@id, 
+                 @itemLong, 
+                 @timeout, 
+                 DATEADD(n, @timeout, @now), 
+                 0, 
+                 @now,
+                 @nowLocal,
+                 1)
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempInsertStateItemLong].[@id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempInsertStateItemLong].[@itemLong]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempInsertStateItemLong].[@timeout]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertStateItemLong].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertStateItemLong].[@itemLong]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemLong]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertStateItemLong].[@timeout]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="925" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempInsertStateItemLong]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemLong   tSessionItemLong,&#xD;&#xA;            @timeout    int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempInsertStateItemShort]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[    
+
+            DECLARE @now AS datetime
+            DECLARE @nowLocal AS datetime
+            
+            SET @now = GETUTCDATE()
+            SET @nowLocal = GETDATE()
+
+            INSERT [ASPState].dbo.ASPStateTempSessions 
+                (SessionId, 
+                 SessionItemShort, 
+                 Timeout, 
+                 Expires, 
+                 Locked, 
+                 LockDate,
+                 LockDateLocal,
+                 LockCookie) 
+            VALUES 
+                (@id, 
+                 @itemShort, 
+                 @timeout, 
+                 DATEADD(n, @timeout, @now), 
+                 0, 
+                 @now,
+                 @nowLocal,
+                 1)
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempInsertStateItemShort].[@id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempInsertStateItemShort].[@itemShort]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempInsertStateItemShort].[@timeout]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertStateItemShort].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertStateItemShort].[@itemShort]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertStateItemShort].[@timeout]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="931" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempInsertStateItemShort]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort,&#xD;&#xA;            @timeout    int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempInsertUninitializedItem]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[    
+
+            DECLARE @now AS datetime
+            DECLARE @nowLocal AS datetime
+            
+            SET @now = GETUTCDATE()
+            SET @nowLocal = GETDATE()
+
+            INSERT [ASPState].dbo.ASPStateTempSessions 
+                (SessionId, 
+                 SessionItemShort, 
+                 Timeout, 
+                 Expires, 
+                 Locked, 
+                 LockDate,
+                 LockDateLocal,
+                 LockCookie,
+                 Flags) 
+            VALUES 
+                (@id, 
+                 @itemShort, 
+                 @timeout, 
+                 DATEADD(n, @timeout, @now), 
+                 0, 
+                 @now,
+                 @nowLocal,
+                 1,
+                 1)
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempInsertUninitializedItem].[@id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempInsertUninitializedItem].[@itemShort]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TempInsertUninitializedItem].[@timeout]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertUninitializedItem].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertUninitializedItem].[@itemShort]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempInsertUninitializedItem].[@timeout]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="980" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempInsertUninitializedItem]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort,&#xD;&#xA;            @timeout    int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempReleaseStateItemExclusive]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, GETUTCDATE()), 
+                Locked = 0
+            WHERE SessionId = @id AND LockCookie = @lockCookie
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempReleaseStateItemExclusive].[@id]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempReleaseStateItemExclusive].[@lockCookie]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempReleaseStateItemExclusive].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempReleaseStateItemExclusive].[@lockCookie]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="377" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempReleaseStateItemExclusive]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @lockCookie int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempRemoveStateItem]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+        DELETE [ASPState].dbo.ASPStateTempSessions
+        WHERE SessionId = @id AND LockCookie = @lockCookie
+        RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempRemoveStateItem].[@id]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempRemoveStateItem].[@lockCookie]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempRemoveStateItem].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempRemoveStateItem].[@lockCookie]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="6" />
+				<Property Name="Length" Value="242" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;    CREATE PROCEDURE [dbo].[TempRemoveStateItem]&#xD;&#xA;        @id     tSessionId,&#xD;&#xA;        @lockCookie int&#xD;&#xA;    AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempResetTimeout]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, Timeout, GETUTCDATE())
+            WHERE SessionId = @id
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempResetTimeout].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempResetTimeout].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="269" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempResetTimeout]&#xD;&#xA;            @id     tSessionId&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempUpdateStateItemLong]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[    
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, @timeout, GETUTCDATE()), 
+                SessionItemLong = @itemLong,
+                Timeout = @timeout,
+                Locked = 0
+            WHERE SessionId = @id AND LockCookie = @lockCookie
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLong].[@timeout]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLong].[@itemLong]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLong].[@id]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLong].[@lockCookie]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLong].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLong].[@itemLong]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemLong]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLong].[@timeout]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLong].[@lockCookie]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="532" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempUpdateStateItemLong]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemLong   tSessionItemLong,&#xD;&#xA;            @timeout    int,&#xD;&#xA;            @lockCookie int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempUpdateStateItemLongNullShort]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[    
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, @timeout, GETUTCDATE()), 
+                SessionItemLong = @itemLong, 
+                SessionItemShort = NULL,
+                Timeout = @timeout,
+                Locked = 0
+            WHERE SessionId = @id AND LockCookie = @lockCookie
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLongNullShort].[@timeout]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLongNullShort].[@itemLong]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLongNullShort].[@id]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemLongNullShort].[@lockCookie]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLongNullShort].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLongNullShort].[@itemLong]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemLong]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLongNullShort].[@timeout]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemLongNullShort].[@lockCookie]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="584" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempUpdateStateItemLongNullShort]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemLong   tSessionItemLong,&#xD;&#xA;            @timeout    int,&#xD;&#xA;            @lockCookie int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempUpdateStateItemShort]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[    
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, @timeout, GETUTCDATE()), 
+                SessionItemShort = @itemShort, 
+                Timeout = @timeout,
+                Locked = 0
+            WHERE SessionId = @id AND LockCookie = @lockCookie
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShort].[@timeout]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShort].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShort].[@id]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShort].[@lockCookie]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShort].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShort].[@itemShort]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShort].[@timeout]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShort].[@lockCookie]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="537" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempUpdateStateItemShort]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort,&#xD;&#xA;            @timeout    int,&#xD;&#xA;            @lockCookie int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TempUpdateStateItemShortNullLong]">
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[    
+            UPDATE [ASPState].dbo.ASPStateTempSessions
+            SET Expires = DATEADD(n, @timeout, GETUTCDATE()), 
+                SessionItemShort = @itemShort, 
+                SessionItemLong = NULL, 
+                Timeout = @timeout,
+                Locked = 0
+            WHERE SessionId = @id AND LockCookie = @lockCookie
+
+            RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShortNullLong].[@timeout]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShortNullLong].[@itemShort]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShortNullLong].[@id]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[TempUpdateStateItemShortNullLong].[@lockCookie]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShortNullLong].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionId]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShortNullLong].[@itemShort]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[tSessionItemShort]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShortNullLong].[@timeout]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[TempUpdateStateItemShortNullLong].[@lockCookie]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="10" />
+				<Property Name="Length" Value="587" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;        CREATE PROCEDURE [dbo].[TempUpdateStateItemShortNullLong]&#xD;&#xA;            @id         tSessionId,&#xD;&#xA;            @itemShort  tSessionItemShort,&#xD;&#xA;            @timeout    int,&#xD;&#xA;            @lockCookie int&#xD;&#xA;        AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlUserDefinedDataType" Name="[dbo].[tSessionId]">
+			<Property Name="IsNullable" Value="False" />
+			<Property Name="Length" Value="88" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlUserDefinedDataType" Name="[dbo].[tSessionItemLong]">
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[image]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlUserDefinedDataType" Name="[dbo].[tSessionItemShort]">
+			<Property Name="Length" Value="7000" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varbinary]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlUserDefinedDataType" Name="[dbo].[tTextPtr]">
+			<Property Name="Length" Value="16" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varbinary]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlLogin" Name="[GBOBespokeApplicationElevated]">
+			<Property Name="Password" Value="h7gloylo0yrwoyRbwubzzkjZmsFT7_&amp;#$!~&lt;gp3k$ydjfha|" />
+			<Property Name="DefaultLanguage" Value="us_english" />
+			<Property Name="Sid" Value="0xF243A1C73FC0A64790C1E33A8C9750A3" />
+			<Property Name="IsCheckPolicyOn" Value="False" />
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlUser" Name="[GBOBespokeApplicationElevated]" Disambiguator="3">
+			<Property Name="LoginIdentifierScript">
+				<Value><![CDATA[[GBOBespokeApplicationElevated]]]></Value>
+			</Property>
+			<Property Name="AuthenticationType" Value="1" />
+			<Relationship Name="Login">
+				<Entry>
+					<References Name="[GBOBespokeApplicationElevated]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDatabaseDdlTrigger" Name="[tr_DDL_BlockChangesSSMS]">
+			<Property Name="SqlTriggerType" Value="1" />
+			<Property Name="BodyScript">
+				<Value QuotedIdentifiers="False"><![CDATA[ 
+if 
+	@@servername like '%PROD%'
+    and is_srvrolemember('sysadmin') = 0 --not sa 
+    and isnull(is_srvrolemember('ssmsadmin'), 0) = 0 -- not in ssmsadmin group 
+    and (
+		app_name() like 'Microsoft SQL Server Management Studio%' -- using ssms
+		or app_name() like 'Microsoft SQL Server Data Tools%' -- using vs ssdt
+	)
+    and host_name() != cast(serverproperty('ServerName') as nvarchar(128)) --not working locally 
+    and suser_name() not in ('GBOBespokeApplication', 'GBOBespokeApplicationElevated', 'GPP\app.bo2') 
+begin 
+  print 'You must use RedGate SQL Compare to ship changes to this database'
+  rollback 
+end]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="EventType">
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="62" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="61" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="63" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="52" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="51" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="53" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="42" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="41" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="43" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="22" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="21" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="23" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="4" />
+				<Property Name="Length" Value="810" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;&#xD;&#xA;CREATE trigger [tr_DDL_BlockChangesSSMS] on database &#xD;&#xA;for &#xD;&#xA;    DDL_FUNCTION_EVENTS, &#xD;&#xA;    DDL_PROCEDURE_EVENTS, &#xD;&#xA;    DDL_VIEW_EVENTS, &#xD;&#xA;    DDL_TABLE_EVENTS     &#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlDatabaseDdlTrigger" Name="[tr_DDL_SchemaChangeLog]">
+			<Property Name="SqlTriggerType" Value="1" />
+			<Property Name="BodyScript">
+				<Value><![CDATA[ 
+
+    SET NOCOUNT ON
+
+    DECLARE @data XML
+    DECLARE @schema SYSNAME
+    DECLARE @object SYSNAME
+    DECLARE @eventType SYSNAME
+
+    SET @data = EVENTDATA()
+    SET @eventType = @data.value('(/EVENT_INSTANCE/EventType)[1]', 'SYSNAME')
+    SET @schema = @data.value('(/EVENT_INSTANCE/SchemaName)[1]', 'SYSNAME')
+    SET @object = @data.value('(/EVENT_INSTANCE/ObjectName)[1]', 'SYSNAME') 
+
+    INSERT [dbo].[SchemaChangeLog] 
+        (
+        [CreateDate],
+        [LoginName], 
+        [ComputerName],
+        [DBName],
+        [SQLEvent], 
+        [Schema], 
+        [ObjectName], 
+        [SQLCmd], 
+        [XmlEvent],
+        [AppName]
+        ) 
+    SELECT
+        GETDATE(),
+        SUSER_NAME(), 
+        HOST_NAME(),   
+        @data.value('(/EVENT_INSTANCE/DatabaseName)[1]', 'SYSNAME'),
+        @eventType, 
+        @schema, 
+        @object, 
+        @data.value('(/EVENT_INSTANCE/TSQLCommand)[1]', 'NVARCHAR(MAX)'), 
+        @data,
+        APP_NAME()
+;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[xml]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[sys].[sysname]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[CreateDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[LoginName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[ComputerName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[DBName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[SQLEvent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[Schema]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[ObjectName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[SQLCmd]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[XmlEvent]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SchemaChangeLog].[AppName]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="EventType">
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="102" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="101" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="103" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="138" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="137" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="139" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="248" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="247" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="249" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="205" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="198" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="197" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="199" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="257" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="255" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="258" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="256" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="291" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="290" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="292" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="279" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="278" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="280" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="171" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="170" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="172" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="253" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="252" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="254" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="207" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="135" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="134" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="136" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="208" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="142" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="141" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="143" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="245" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="244" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="246" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="132" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="131" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="133" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="218" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="220" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="231" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="242" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="74" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="76" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="211" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="222" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="233" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="212" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="223" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="234" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="294" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="293" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="295" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="62" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="61" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="63" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="192" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="191" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="193" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="195" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="194" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="196" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="216" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="228" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="238" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="52" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="51" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="53" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="219" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="229" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="239" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="243" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="282" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="281" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="283" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="154" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="156" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="152" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="151" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="153" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="158" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="157" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="159" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="175" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="174" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="176" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="165" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="164" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="166" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="162" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="161" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="163" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="34" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="36" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="213" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="25" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="224" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="24" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="274" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="206" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="235" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="26" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="27" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="29" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="28" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="22" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="21" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="23" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="42" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="41" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="43" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="72" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="71" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="73" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="91" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="93" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="178" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="177" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="179" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTriggerEventTypeSpecifier">
+						<Property Name="EventType" Value="241" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="4" />
+				<Property Name="Length" Value="1097" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="&#xD;&#xA;&#xD;&#xA;CREATE TRIGGER [tr_DDL_SchemaChangeLog] ON DATABASE &#xD;&#xA;FOR DDL_DATABASE_LEVEL_EVENTS AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

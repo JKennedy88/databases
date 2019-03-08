@@ -65,6 +65,7 @@
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="Database Triggers\" />
     <Folder Include="dbo\User Defined Types\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\ASPStateTempApplications.sql" />
@@ -149,7 +150,8 @@
     <Build Include="dbo\User Defined Types\tSessionItemLong.sql" />
     <Build Include="dbo\User Defined Types\tSessionItemShort.sql" />
     <Build Include="dbo\User Defined Types\tTextPtr.sql" />
-    <Build Include="COAL_ChangeScript_#1_to_#2.sql" />
+    <Build Include="dbo\Stored Procedures\spGetLedgerAccountTransactionDateOptions.sql" />
+    <None Include="Scripts\ChangeScript.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="local.publish.xml" />
