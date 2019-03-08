@@ -150,6 +150,7 @@
     <Build Include="dbo\User Defined Types\tSessionItemShort.sql" />
     <Build Include="dbo\User Defined Types\tTextPtr.sql" />
   </ItemGroup>
+  <Import Project="..\packages\OctoPack.3.6.4\builds\OctoPack.Tasks.dll" Condition="Exists('..\packages\OctoPack.3.6.4\builds\OctoPack.Tasks.dll')" />
   <Import Project="..\packages\OctoPack.3.6.4\builds\OctoPack.targets" Condition="Exists('..\packages\OctoPack.3.6.4\builds\OctoPack.targets')" />
   <Target Name="EnsureOctoPackImported" BeforeTargets="BeforeBuild" Condition="'$(OctoPackImported)' == ''">
     <Error Condition="!Exists('..\packages\OctoPack.3.6.4\builds\OctoPack.targets') And ('$(RunOctoPack)' != '' And $(RunOctoPack))" Text="You are trying to build with OctoPack, but the NuGet targets file that OctoPack depends on is not available on this computer. This is probably because the OctoPack package has not been committed to source control, or NuGet Package Restore is not enabled. Please enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
