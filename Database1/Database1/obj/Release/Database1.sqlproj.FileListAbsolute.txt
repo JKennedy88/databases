@@ -1,0 +1,9 @@
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Release\Database1.dacpac
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Release\deploy.ps1
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Release\Database1.dll
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Release\Database1.pdb
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Release\OctoPack.Tasks.dll
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\bin\Release\OctoPack.Tasks.pdb
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Database1.sqlproj.CopyComplete
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Database1.dll
+C:\Users\jeffrey.kennedy\source\repos\databases\Database1\Database1\obj\Release\Database1.pdb
