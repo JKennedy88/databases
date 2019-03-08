@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Database1</id>
+		<version>1.0.0.1</version>
+		<authors>Simon Peacock</authors>
+		<description>Package for Database1</description>
+	</metadata>
+	<files>
+		<file src="\bin\Release\Database1.dacpac" target="Content" />
+		<file src="\bin\Release\Deploy.ps1" />
+	</files>
+</package>
