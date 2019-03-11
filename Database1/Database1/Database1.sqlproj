@@ -166,4 +166,7 @@
     </Reference>
   </ItemGroup>
   <Import Project="..\packages\OctoPack.3.6.4\build\OctoPack.targets" />
+	<PropertyGroup>
+		<OctoPackProjectName>Database1</OctoPackProjectName>
+	</PropertyGroup>
 </Project>
